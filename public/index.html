@@ -11,7 +11,7 @@
     <nav>
         <div class="logo">
             <img src="images/logo.png" alt="Logo" class="logo">
-            <a>TuttoConVino</a>
+            <a href="index.html">TuttoConVino</a>
         </div>
         <div class="profile">
             <a href="#">
@@ -49,15 +49,47 @@
                 <div class="image-container">
                     <div class="image-flipper" id="image3-flipper">
                         <div class="front">
-                            <img src="images/your-image.png" alt="Your Image">
+                            <img src="images/pinot.png" alt="Pinot">
                         </div>
                         <div class="back">
-                            <img src="images/your-description.png" alt="Your Description">
+                            <img src="images/PinotDes.png" alt="description">
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container" id="image4-container">
+                    <div class="image-flipper" id="image4-flipper">
+                        <div class="front">
+                            <img src="images/SBgoat.png" alt="description">
+                        </div>
+                        <div class="back">
+                            <img src="images/SBdes.png" alt="Another Image">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</body>
-</html>
+
+    <script>
+        const image1Flipper = document.getElementById('image1-flipper');
+        const image2Flipper = document.getElementById('image2-flipper');
+        const image3Flipper = document.getElementById('image3-flipper');
+        const image4Flipper = document.getElementById('image4-flipper');
+    
+        image1Flipper.addEventListener('click', function() {
+            image1Flipper.classList.toggle('flipped');
+        });
+    
+        image2Flipper.addEventListener('click', function() {
+            image2Flipper.classList.toggle('flipped');
+        });
+    
+        image3Flipper.addEventListener('click', function() {
+            image3Flipper.classList.toggle('flipped');
+        });
+    
+        image4Flipper.addEventListener('click', function() {
+            image4Flipper.classList.toggle('flipped');
+        });
+    </script>
+    
