@@ -28,3 +28,160 @@
                 </a>
             </div>
         </nav>
+
+        <div class="headingone">
+          <h2>Today's Top Picks...</h2>
+        </div>
+          <div class="containerone">
+            <div class="grid-container">
+              <div class="section-1">
+                <div class="image-container">
+                  <div class="image-flipper" id="image1-flipper">
+                    <div class="front">
+                      <img src="images/bubbles.png" alt="Bubbles">
+                    </div>
+                    <div class="back">
+                      <img src="images/BBdes.png" alt="description">
+                    </div>
+                  </div>
+                </div>
+                <div class="image-container" id="image2-container">
+                  <div class="image-flipper" id="image2-flipper">
+                    <div class="front">
+                      <img src="images/sangio.png" alt="Sangiovese">
+                    </div>
+                    <div class="back">
+                      <img src="images/SangioDes.png" alt="Another Image">
+                    </div>
+                  </div>
+                </div>
+                <div class="image-container">
+                  <div class="image-flipper" id="image3-flipper">
+                    <div class="front">
+                      <img src="images/pinot.png" alt="Pinot">
+                    </div>
+                    <div class="back">
+                      <img src="images/PinotDes.png" alt="description">
+                    </div>
+                  </div>
+                </div>
+                <div class="image-container" id="image4-container">
+                  <div class="image-flipper" id="image4-flipper">
+                    <div class="front">
+                      <img src="images/SBgoat.png" alt="description">
+                    </div>
+                    <div class="back">
+                      <img src="images/SBdes.png" alt="Another Image">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <script>
+            const image1Flipper = document.getElementById('image1-flipper');
+            const image2Flipper = document.getElementById('image2-flipper');
+            const image3Flipper = document.getElementById('image3-flipper');
+            const image4Flipper = document.getElementById('image4-flipper');
+          
+            image1Flipper.addEventListener('click', function() {
+              image1Flipper.classList.toggle('flipped');
+            });
+          
+            image2Flipper.addEventListener('click', function() {
+              image2Flipper.classList.toggle('flipped');
+            });
+          
+            image3Flipper.addEventListener('click', function() {
+              image3Flipper.classList.toggle('flipped');
+            });
+          
+            image4Flipper.addEventListener('click', function() {
+              image4Flipper.classList.toggle('flipped');
+            });
+          </script>
+          
+          <div class="grid-container">
+            <div class="containertwo">
+              <div class="ratings-headings"></div>
+              <div class="ratings"></div>
+              <div class="graph"></div>
+            </div>
+          </div>
+
+                  <!-- <h1>Task Tracker</h1>
+        </header>
+        <form id="taskform">
+            <div class="form-row">
+                <label for="taskName">Name of Wine</label>
+                <input
+                    type="text"
+                    name="taskName"
+                    id="taskName"
+                    required="true"
+                >
+            </div>
+            <div class="form-row">
+              <label for="taskName">Name of Cheese</label>
+              <input
+                  type="text"
+                  name="taskName"
+                  id="taskName"
+                  required="true"
+              >
+          </div>
+            <div class="form-row">
+                <label for="taskType">Type</label>
+                <select id="taskType" name="taskType" required="true">
+                    <option value="">Select one</option>
+                    <option value="Concept Ideation">Concept Ideation</option>
+                    <option value="Wireframing">Wireframing</option>
+                    <option value="Application Coding">Application Coding</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="taskRate">Rate</label>
+                <input
+                    type="number"
+                    name="taskRate"
+                    id="taskRate"
+                    required="true"
+                >
+            </div>
+            <div class="form-row">
+                <label for="taskTime">Time</label>
+                <input
+                    type="number"
+                    name="taskTime"
+                    id="taskTime"
+                    required="true"
+                >
+            </div>
+            <div class="form-row">
+                <label for="taskClient">Client</label>
+                <input
+                    type="text"
+                    name="taskClient"
+                    id="taskClient"
+                    required="true"
+                >
+            </div>
+            <div class="form-row">
+                <input type="submit">
+            </div>
+        </form>
+        <h2>Tasks</h2>
+        <ul id="tasklist"></ul>
+        <script src="script.js"></script>
+                </div> -->
+
+              </div>
+            </div>
+
+
+
+
+        
+    </body>
+</html>
