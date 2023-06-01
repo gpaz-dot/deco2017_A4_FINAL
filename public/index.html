@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TuttoConVino</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <nav>
@@ -101,12 +102,12 @@
     </script>
 
 <div class="lower-section">
-    <!-- Rating form section -->
-    <h1>+ Add Your Rating</h1>
-    <form id="taskform">
+    <div class="column">
+      <h1>+ Add Your Rating</h1>
+      <form id="taskform">
         <div class="form-row">
-            <label for="WineName">Name of Wine</label>
-            <input type="text" name="WineName" id="WineName" required="true">
+          <label for="WineName">Name of Wine</label>
+          <input type="text" name="WineName" id="WineName" required="true">
         </div>
         <div class="form-row">
             <label for="WineFlavour">Flavour of Wine</label>
@@ -116,11 +117,10 @@
                 <option value="Oak">Oak</option>
                 <option value="Citrus">Citrus</option>
             </select>
-        </div>
         <div class="form-row">
             <label for="CheeseName">Name of Cheese</label>
             <input type="text" name="CheeseName" id="CheeseName" required="true">
-        </div>
+          </div>
         <div class="form-row">
             <label for="CheeseFlavour">Flavour of Cheese</label>
             <select id="CheeseFlavour" name="CheeseFlavour" required="true">
@@ -131,19 +131,31 @@
             </select>
         </div>
         <div class="form-row">
-            <label for="taskRate">Rate</label>
-            <input type="number" name="taskRate" id="taskRate" required="true">
-        </div>
-        <!-- add description box -->
-        <div class="form-row">
+            <label for="taskRating">Rating</label>
+            <div id="starRating">
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <input type="hidden" name="taskRating" id="taskRating" required="true">
+          </div>
+          <div class="form-row">
+            <label for="taskDescription">Description</label>
+            <textarea name="taskDescription" id="taskDescription" required="true"></textarea>
+          </div>          
+          <div class="form-row">
             <input type="submit">
-        </div>
-    </form>
-</div>
-        <!-- Tasks section -->
-        <h2>Tasks</h2>
-        <ul id="tasklist"></ul>
-        <script src="script.js"></script>
-    </div> 
+          </div>
+        </form>
+      </div>
+    <div class="column">
+      <h2>Tasks</h2>
+      <ul id="tasklist"></ul>
+      <script src="script.js"></script>
+    </div>
+  </div>  
+  
 </body>
 </html>

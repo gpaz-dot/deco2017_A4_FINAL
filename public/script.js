@@ -10,7 +10,9 @@ form.addEventListener("submit", function (event) {
         form.elements.WineFlavour.value,
         form.elements.CheeseName.value,
         form.elements.CheeseFlavour.value,
-        form.elements.taskRate.value,
+        form.elements.taskRating.value,
+        form.elements.taskDescription.value,
+
     )
     console.log(taskList)
 })
@@ -18,7 +20,7 @@ form.addEventListener("submit", function (event) {
 function displayTask(task) {
     let item = document.createElement("li");
     item.setAttribute("data-id", task.id);
-    item.innerHTML = `<p><strong>${task.WineName}</strong><br>${task.WineFlavour}<br>${task.CheeseName}<br>${task.CheeseFlavour}<br>${task.rate}</p>`;
+    item.innerHTML = `<p><strong>${task.WineName}</strong><br>${task.WineFlavour}<br>${task.CheeseName}<br>${task.CheeseFlavour}<br>${task.rating}p>${task.description}</p>`;
 
     tasklist.appendChild(item);
 
@@ -64,7 +66,7 @@ var task = {
   type: "Concept Ideation",
   id: Date.now(),
   date: new Date().toISOString(),
-  rate: 5,
+  rating: 5,
 }
 
 console.log(task);
@@ -79,7 +81,7 @@ var taskList = [];
 // Replace the property values with the input paramaters
 // Add the object to the taskList array
 
-function addTask(WineName, WineFlavour, CheeseName, CheeseFlavour, rate) {
+function addTask(WineName, WineFlavour, CheeseName, CheeseFlavour, rating) {
 
     // Creating the object with the usual property:value syntax
 
@@ -89,9 +91,10 @@ function addTask(WineName, WineFlavour, CheeseName, CheeseFlavour, rate) {
         WineName,
         CheeseName,
         CheeseFlavour,
+        taskDescription, 
         id: Date.now(),
         date: new Date().toISOString(),
-        rate,
+        rating,
     }
 
     taskList.push(task);
@@ -101,3 +104,33 @@ function addTask(WineName, WineFlavour, CheeseName, CheeseFlavour, rate) {
 
 // Log the array to the console.
 console.log(taskList);
+
+// ...
+
+// Variable to store the selected rating
+let selectedRating = 0;
+
+// Function to update the star rating UI
+function updateStarRating() {
+  const starIcons = document.querySelectorAll("#starRating i");
+  starIcons.forEach((icon, index) => {
+    if (index < selectedRating) {
+      icon.classList.remove("far");
+      icon.classList.add("fas");
+    } else {
+      icon.classList.remove("fas");
+      icon.classList.add("far");
+    }
+  });
+}
+
+// Event listener for star rating selection
+document.querySelectorAll("#starRating i").forEach((star, index) => {
+  star.addEventListener("click", () => {
+    selectedRating = index + 1;
+    updateStarRating();
+    document.getElementById("taskRating").value = selectedRating;
+  });
+});
+
+

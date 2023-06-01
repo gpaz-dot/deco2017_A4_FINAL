@@ -112,50 +112,145 @@
     max-width: 100%;
     height: auto;
   }
-  .lower-section {
-    background-color: #7B241C;
-    padding: 20px;
-    margin-top: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  
+.lower-section {
+  background-color: #7B241C;
+  padding: 20px;
+  margin-top: 150px;
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
 }
 
 .form-row {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
 label {
-    color: #fff;
-    font-weight: bold;
+  font-weight: bold;
+  color: #fff;
 }
 
 input[type="text"],
 select,
 input[type="number"] {
-    padding: 5px;
-    border: none;
-    border-radius: 3px;
-    width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
 }
 
 input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #7B241C;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-weight: bold;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #7B241C;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
+#tasklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #7B241C;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.task-rating {
+  display: flex;
+  align-items: center;
+}
+
+.task-rating .fas {
+  color: #f9ca24;
+}
+
+.task-description {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.task-delete {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.task-delete:hover {
+  background-color: #c82333;
+}
+
+button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c82333;
+}
+
+  #starRating {
+    font-size: 24px;
+    color: #f9f9f9;
+    margin-bottom: 10px;
+  }
   
+  #starRating .far {
+    cursor: pointer;
+  }
+  
+  #starRating .fas {
+    color: #f9ca24;
+  }
+  
+  .star {
+    display: inline-block;
+    font-size: 24px;
+    color: #f9f9f9;
+    cursor: pointer;
+  }
+  
+  .star:hover {
+    color: gold;
+  }
