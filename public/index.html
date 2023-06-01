@@ -100,62 +100,47 @@
         });
     </script>
 
-    <div class="lower-section">
-        <div class="rating-section">
-        <!-- Rating form section -->
-        <h1>+ Add Your Rating</h1>
-        <form id="taskform">
-            <div class="form-row">
-                <label for="WineName">Name of Wine</label>
-                <input
-                    type="text"
-                    name="WineName"
-                    id="WineName"
-                    required="true">
-            </div>
-            <div class="form-row">
-                <label for="WineFlavour">Flavour of Wine</label>
-                <select id="WineFlavour" name="WineFlavour" required="true">
-                    <option value="">Select one</option>
-                    <option value="Cherry">Cherry</option>
-                    <option value="Oak">Oak</option>
-                    <option value="Citrus">Citrus</option>
-                </select>
-                <label for="CheeseName">Name of Cheese</label>
-                <input
-                    type="text"
-                    name="CheeseName"
-                    id="CheeseName"
-                    required="true"
-                >
-            </div>
-            <div class="form-row">
-                <label for="CheeseFlavour">Flavour of cheese</label>
-                <select id="CheeseFlavour" name="CheeseFlavour" required="true">
-                    <option value="">Select one</option>
-                    <option value="Sharp">Sharp</option>
-                    <option value="Creamy">Creamy</option>
-                    <option value="Aged">Aged</option>
-                </select>
-            </div>
-            <div class="form-row">
-                <label for="taskRate">Rate</label>
-                <input
-                    type="number"
-                    name="taskRate"
-                    id="taskRate"
-                    required="true"
-                >
-            </div>
-            <!-- add description box -->
-            <div class="form-row">
-                <input type="submit">
-            </div>
+<div class="lower-section">
+    <!-- Rating form section -->
+    <h1>+ Add Your Rating</h1>
+    <form id="taskform">
+        <div class="form-row">
+            <label for="WineName">Name of Wine</label>
+            <input type="text" name="WineName" id="WineName" required="true">
         </div>
-    </div>
-        </form>
+        <div class="form-row">
+            <label for="WineFlavour">Flavour of Wine</label>
+            <select id="WineFlavour" name="WineFlavour" required="true">
+                <option value="">Select one</option>
+                <option value="Cherry">Cherry</option>
+                <option value="Oak">Oak</option>
+                <option value="Citrus">Citrus</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="CheeseName">Name of Cheese</label>
+            <input type="text" name="CheeseName" id="CheeseName" required="true">
+        </div>
+        <div class="form-row">
+            <label for="CheeseFlavour">Flavour of Cheese</label>
+            <select id="CheeseFlavour" name="CheeseFlavour" required="true">
+                <option value="">Select one</option>
+                <option value="Sharp">Sharp</option>
+                <option value="Creamy">Creamy</option>
+                <option value="Aged">Aged</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="taskRate">Rate</label>
+            <input type="number" name="taskRate" id="taskRate" required="true">
+        </div>
+        <!-- add description box -->
+        <div class="form-row">
+            <input type="submit">
+        </div>
+    </form>
+</div>
         <!-- Tasks section -->
-        <div class="tasks-section">
         <h2>Tasks</h2>
         <ul id="tasklist"></ul>
         <script src="script.js"></script>
