@@ -20,6 +20,14 @@
     background-color: #FCF3CF;
   }
   
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #FCF3CF;
+  }
+  
   .logo a {
     font-size: 35px;
     font-weight: bold;
@@ -27,11 +35,15 @@
     color: #7B241C;
     padding-left: 15px;
   }
+
+  .logo img {
+    width: 100px;
+    height: 100px;
+  }
   
   .profile img {
-    width: 50px;
+    width: 125px;
     height: 50px;
-    border-radius: 50%;
   }
   
   .headingone {
@@ -111,7 +123,31 @@
     padding: 20px;
   }
   
-  
+     .rating {
+      display: flex;
+    }
+    
+    .rating input {
+      position: absolute;
+      left: -100vw;
+    }
+    
+    .rating label {
+      width: 48px;
+      height: 48px;
+      background: url('stars.svg') no-repeat top left;
+      cursor: pointer;
+    }
+    
+    .rating input:checked + label,
+    .rating input:hover ~ input + label {
+      background-position: -48px 0;
+    }
 
-  
-  
+    .lower-section {
+      background-color: #7B241C;
+      padding: 20px;
+      margin-top: 150px;
+    }
+    
+    

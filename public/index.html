@@ -29,10 +29,10 @@
                 <div class="image-container">
                     <div class="image-flipper" id="image1-flipper">
                         <div class="front">
-                            <img src="images/bubbles.png" alt="Bubbles">
+                            <img src="./images/bubbles.png" alt="Bubbles">
                         </div>
                         <div class="back">
-                            <img src="images/BBdes.png" alt="description">
+                            <img src="./images/BBdes.png" alt="description">
                         </div>
                     </div>
                 </div>
@@ -93,9 +93,11 @@
         });
     </script>
 
+    <div class="lower-section">
 
-                  <h1>Task Tracker</h1>
+                  <h1>+ Add Your Rating</h1>
         </header>
+        <div class="containertwo"></div>
         <form id="taskform">
             <div class="form-row">
                 <label for="taskName">Name of Wine</label>
@@ -103,54 +105,42 @@
                     type="text"
                     name="taskName"
                     id="taskName"
-                    required="true"
-                >
+                    required="true">
             </div>
             <div class="form-row">
-              <label for="taskName">Name of Cheese</label>
-              <input
-                  type="text"
-                  name="taskName"
-                  id="taskName"
-                  required="true"
-              >
-          </div>
-            <div class="form-row">
-                <label for="taskType">Type</label>
+                <label for="taskType">Flavour of Wine</label>
                 <select id="taskType" name="taskType" required="true">
                     <option value="">Select one</option>
-                    <option value="Concept Ideation">Concept Ideation</option>
-                    <option value="Wireframing">Wireframing</option>
-                    <option value="Application Coding">Application Coding</option>
+                    <option value="Concept Ideation">Cherry</option>
+                    <option value="Wireframing">Oak</option>
+                    <option value="Application Coding">Citrus</option>
                 </select>
-            </div>
-            <div class="form-row">
-                <label for="taskRate">Rate</label>
-                <input
-                    type="number"
-                    name="taskRate"
-                    id="taskRate"
-                    required="true"
-                >
-            </div>
-            <div class="form-row">
-                <label for="taskTime">Time</label>
-                <input
-                    type="number"
-                    name="taskTime"
-                    id="taskTime"
-                    required="true"
-                >
-            </div>
-            <div class="form-row">
-                <label for="taskClient">Client</label>
+                <label for="taskName">Name of Cheese</label>
                 <input
                     type="text"
-                    name="taskClient"
-                    id="taskClient"
+                    name="taskName"
+                    id="taskName"
                     required="true"
                 >
-            </div>
+                  <div class="form-row">
+                    <label for="taskType">Flavour of cheese</label>
+                    <select id="taskType" name="taskType" required="true">
+                        <option value="">Select one</option>
+                        <option value="Concept Ideation">Sharp</option>
+                        <option value="Wireframing">Creamy</option>
+                        <option value="Application Coding">Aged</option>
+                    </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="taskRate">Rate</label>
+                        <input
+                            type="number"
+                            name="taskRate"
+                            id="taskRate"
+                            required="true"
+                        >
+                    </div>
+            <!-- add description box -->
             <div class="form-row">
                 <input type="submit">
             </div>
@@ -159,4 +149,5 @@
         <ul id="tasklist"></ul>
         <script src="script.js"></script>
                 </div> 
+            </div>
     
