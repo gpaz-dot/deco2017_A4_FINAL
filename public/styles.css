@@ -121,21 +121,13 @@
   gap: 20px;
 }
 
-.column {
-  flex: 1;
+.cardOne{
+  width: 40vw;
+  margin-right: 5vw;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #fff;
-}
-
-.form-row {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
+.cardTwo {
+  width: 30vw;
 }
 
 label {
@@ -253,4 +245,20 @@ button:hover {
   
   .star:hover {
     color: gold;
+  }
+
+  .card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
   }
