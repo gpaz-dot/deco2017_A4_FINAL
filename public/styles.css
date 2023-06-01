@@ -28,6 +28,9 @@
     background-color: #FCF3CF;
   }
   
+  .BrandName {
+    margin-left: 25px;
+  }
   .logo a {
     font-size: 35px;
     font-weight: bold;
@@ -49,6 +52,7 @@
   .headingone {
     background-color: #FCF3CF;
     padding: 20px;
+    color:#7B241C
   }
   
   .containerone {
@@ -108,46 +112,20 @@
     max-width: 100%;
     height: auto;
   }
-  
-  /* Additional styles for section 2 */
-  .containertwo {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-  }
-  
-  .ratings-headings,
-  .ratings,
-  .graph {
-    background-color: #FCF3CF;
-    padding: 20px;
-  }
-  
-     .rating {
-      display: flex;
-    }
-    
-    .rating input {
-      position: absolute;
-      left: -100vw;
-    }
-    
-    .rating label {
-      width: 48px;
-      height: 48px;
-      background: url('stars.svg') no-repeat top left;
-      cursor: pointer;
-    }
-    
-    .rating input:checked + label,
-    .rating input:hover ~ input + label {
-      background-position: -48px 0;
-    }
-
     .lower-section {
       background-color: #7B241C;
       padding: 20px;
       margin-top: 150px;
-    }
-    
-    
+      display: flex;
+  }
+  
+  .rating-section {
+      flex-basis: 50%;
+      margin-right: 20px;
+  }
+  
+  .tasks-section {
+      flex-basis: 50%;
+  }
+  
+  

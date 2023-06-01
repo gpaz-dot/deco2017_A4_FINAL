@@ -5,14 +5,12 @@ const tasklist = document.getElementById("tasklist");
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    console.log(form.elements.taskType.value)
-
     addTask(
-        form.elements.taskName.value,
-        form.elements.taskType.value,
+        form.elements.WineName.value,
+        form.elements.WineFlavour.value,
+        form.elements.CheeseName.value,
+        form.elements.CheeseFlavour.value,
         form.elements.taskRate.value,
-        form.elements.taskTime.value,
-        form.elements.taskClient.value,
     )
     console.log(taskList)
 })
@@ -20,7 +18,7 @@ form.addEventListener("submit", function (event) {
 function displayTask(task) {
     let item = document.createElement("li");
     item.setAttribute("data-id", task.id);
-    item.innerHTML = `<p><strong>${task.name}</strong><br>${task.type}</p>`;
+    item.innerHTML = `<p><strong>${task.WineName}</strong><br>${task.WineFlavour}<br>${task.CheeseName}<br>${task.CheeseFlavour}<br>${task.rate}</p>`;
 
     tasklist.appendChild(item);
 
@@ -61,17 +59,15 @@ function displayTask(task) {
 
 // Commented out now the object creation is included in the function
 
-// var task = {
-//   name: "Initial Sketches",
-//   type: "Concept Ideation",
-//   id: Date.now(),
-//   date: new Date().toISOString(),
-//   rate: 50,
-//   time: 5,
-//   client: "Google"
-// }
+var task = {
+  name: "Initial Sketches",
+  type: "Concept Ideation",
+  id: Date.now(),
+  date: new Date().toISOString(),
+  rate: 5,
+}
 
-// console.log(task);
+console.log(task);
 
 
 // Create an array called 'taskList'
@@ -83,38 +79,25 @@ var taskList = [];
 // Replace the property values with the input paramaters
 // Add the object to the taskList array
 
-function addTask(name, type, rate, time, client) {
+function addTask(WineName, WineFlavour, CheeseName, CheeseFlavour, rate) {
 
     // Creating the object with the usual property:value syntax
-    // Create task object 
-    // let task = {
-    //   name: name,
-    //   type: type,
-    //   id: Date.now(),
-    //   date: new Date().toISOString(),
-    //   rate: rate,
-    //   time: time,
-    //   client: client
-    // }
 
     // Creating the object, directly passing in the input parameters
     let task = {
-        name,
-        type,
+        WineFlavour,
+        WineName,
+        CheeseName,
+        CheeseFlavour,
         id: Date.now(),
         date: new Date().toISOString(),
         rate,
-        time,
-        client
     }
 
     taskList.push(task);
     displayTask(task);
 
 }
-
-// Call the function with test values for the input paramaters
-addTask("Initial Sketches", "Concept Ideation", 50, 5, "Google");
 
 // Log the array to the console.
 console.log(taskList);

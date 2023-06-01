@@ -9,9 +9,10 @@
 </head>
 <body>
     <nav>
+        <!-- Navigation bar -->
         <div class="logo">
             <img src="images/logo.png" alt="Logo" class="logo">
-            <a href="index.html">TuttoConVino</a>
+            <a href="index.html" class="BrandName">TuttoConVino</a>
         </div>
         <div class="profile">
             <a href="#">
@@ -26,6 +27,7 @@
     <div class="containerone">
         <div class="grid-container">
             <div class="section-1">
+                <!-- Image flipper section -->
                 <div class="image-container">
                     <div class="image-flipper" id="image1-flipper">
                         <div class="front">
@@ -71,83 +73,92 @@
     </div>
 
     <script>
+        // Flipper event listeners
         const image1Flipper = document.getElementById('image1-flipper');
         const image2Flipper = document.getElementById('image2-flipper');
         const image3Flipper = document.getElementById('image3-flipper');
         const image4Flipper = document.getElementById('image4-flipper');
-    
+
+        // Event listener for image 1 flipper
         image1Flipper.addEventListener('click', function() {
             image1Flipper.classList.toggle('flipped');
         });
-    
+
+        // Event listener for image 2 flipper
         image2Flipper.addEventListener('click', function() {
             image2Flipper.classList.toggle('flipped');
         });
-    
+
+        // Event listener for image 3 flipper
         image3Flipper.addEventListener('click', function() {
             image3Flipper.classList.toggle('flipped');
         });
-    
+
+        // Event listener for image 4 flipper
         image4Flipper.addEventListener('click', function() {
             image4Flipper.classList.toggle('flipped');
         });
     </script>
 
     <div class="lower-section">
-
-                  <h1>+ Add Your Rating</h1>
-        </header>
-        <div class="containertwo"></div>
+        <div class="rating-section">
+        <!-- Rating form section -->
+        <h1>+ Add Your Rating</h1>
         <form id="taskform">
             <div class="form-row">
-                <label for="taskName">Name of Wine</label>
+                <label for="WineName">Name of Wine</label>
                 <input
                     type="text"
-                    name="taskName"
-                    id="taskName"
+                    name="WineName"
+                    id="WineName"
                     required="true">
             </div>
             <div class="form-row">
-                <label for="taskType">Flavour of Wine</label>
-                <select id="taskType" name="taskType" required="true">
+                <label for="WineFlavour">Flavour of Wine</label>
+                <select id="WineFlavour" name="WineFlavour" required="true">
                     <option value="">Select one</option>
-                    <option value="Concept Ideation">Cherry</option>
-                    <option value="Wireframing">Oak</option>
-                    <option value="Application Coding">Citrus</option>
+                    <option value="Cherry">Cherry</option>
+                    <option value="Oak">Oak</option>
+                    <option value="Citrus">Citrus</option>
                 </select>
-                <label for="taskName">Name of Cheese</label>
+                <label for="CheeseName">Name of Cheese</label>
                 <input
                     type="text"
-                    name="taskName"
-                    id="taskName"
+                    name="CheeseName"
+                    id="CheeseName"
                     required="true"
                 >
-                  <div class="form-row">
-                    <label for="taskType">Flavour of cheese</label>
-                    <select id="taskType" name="taskType" required="true">
-                        <option value="">Select one</option>
-                        <option value="Concept Ideation">Sharp</option>
-                        <option value="Wireframing">Creamy</option>
-                        <option value="Application Coding">Aged</option>
-                    </select>
-                    </div>
-                    <div class="form-row">
-                        <label for="taskRate">Rate</label>
-                        <input
-                            type="number"
-                            name="taskRate"
-                            id="taskRate"
-                            required="true"
-                        >
-                    </div>
+            </div>
+            <div class="form-row">
+                <label for="CheeseFlavour">Flavour of cheese</label>
+                <select id="CheeseFlavour" name="CheeseFlavour" required="true">
+                    <option value="">Select one</option>
+                    <option value="Sharp">Sharp</option>
+                    <option value="Creamy">Creamy</option>
+                    <option value="Aged">Aged</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="taskRate">Rate</label>
+                <input
+                    type="number"
+                    name="taskRate"
+                    id="taskRate"
+                    required="true"
+                >
+            </div>
             <!-- add description box -->
             <div class="form-row">
                 <input type="submit">
             </div>
+        </div>
+    </div>
         </form>
+        <!-- Tasks section -->
+        <div class="tasks-section">
         <h2>Tasks</h2>
         <ul id="tasklist"></ul>
         <script src="script.js"></script>
-                </div> 
-            </div>
-    
+    </div> 
+</body>
+</html>
