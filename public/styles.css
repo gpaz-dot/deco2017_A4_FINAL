@@ -52,7 +52,7 @@
   .headingone {
     background-color: #FCF3CF;
     padding: 20px;
-    color:#7B241C
+    color: black
   }
   
   .containerone {
@@ -121,18 +121,26 @@
   gap: 20px;
 }
 
-.cardOne{
+.cardOne {
   width: 40vw;
   margin-right: 5vw;
+  background-color: #FCF3CF;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .cardTwo {
   width: 30vw;
+  background-color: #FCF3CF;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 label {
   font-weight: bold;
-  color: #fff;
+  color: black;
 }
 
 input[type="text"],
@@ -224,7 +232,7 @@ button:hover {
 
   #starRating {
     font-size: 24px;
-    color: #f9f9f9;
+    color:#7B241C;
     margin-bottom: 10px;
   }
   
